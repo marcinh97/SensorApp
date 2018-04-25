@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SomethingApp</string>
+    <string name="duration_long">1500</string>
+    <string name="duration_short">750</string>
+</resources>
