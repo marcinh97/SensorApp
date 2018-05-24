@@ -1,5 +1,46 @@
 <resources>
-    <string name="app_name">SomethingApp</string>
+    <string name="app_name">SensorQuizApp</string>
     <string name="duration_long">1500</string>
     <string name="duration_short">750</string>
+
+    <string name="question1">What\'s the capital of Slovakia?</string>
+    <string name="question2">What\'s the capital of Poland?</string>
+    <string name="question3">What\'s the capital of Romania?</string>
+    <string name="question4">What\'s the capital of Bhutan?</string>
+    <string name="question0">What\'s the capital of Finland?</string>
+
+    <string name="question1_answer1">Bratislava</string>
+    <string name="question1_answer2">Ljubljana</string>
+    <string name="question1_answer3">Warsaw</string>
+    <string name="question1_answer4">Cracow</string>
+
+
+    <string name="question2_answer1">Warsaw</string>
+    <string name="question2_answer2">Canberra</string>
+    <string name="question2_answer3">Anberra</string>
+    <string name="question2_answer4">Baberra</string>
+
+    <string name="question3_answer1">Bucharest</string>
+    <string name="question3_answer2">Budapest</string>
+    <string name="question3_answer3">Sudapest</string>
+    <string name="question3_answer4">Hahapest</string>
+
+
+    <string name="question4_answer1">Thimphu</string>
+    <string name="question4_answer2">Kathmandu</string>
+    <string name="question4_answer3">Harambe</string>
+    <string name="question4_answer4">Carramba</string>
+
+    <string name="question0_answer1">Helsinki</string>
+    <string name="question0_answer2">Oslo</string>
+    <string name="question0_answer3">Tallinn</string>
+    <string name="question0_answer4">Kazimierz Dolny nad Wisłą</string>
+
+    <string name="answer_text">Odpowiedź</string>
+
+    <string name="first_answer_text">Przechyl telefon do przodu, żeby poznać kolejne pytanie!</string>
+
+
+    <string name="correct">Correct!</string>
+    <string name="incorrect">Incorrect :( Try again</string>
 </resources>

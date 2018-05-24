@@ -8,22 +8,34 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-/**
- * Created by marcin on 24.04.2018.
- */
 
 public class QuestionFragment extends Fragment {
-    private static final int NUMBER_OF_WORDS = 8;
     private View view;
     private TextView textView;
+    private static final String QUESTION_PREFIX = "question";
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         inflateLayout(inflater, container);
-        textView = view.findViewById(R.id.word_shown_tv);
-        textView.setText("KaczkaBaczka");
+        initViews();
+          Bundle bundle = getArguments();
+        if (bundle != null) {
+            initQuestion(bundle);
+        }
         return view;
+    }
+
+    private void initQuestion(Bundle bundle) {
+        String numberString = Integer.toString(bundle.getInt(MainActivity.QUESTION_NUMBER));
+        String id = QUESTION_PREFIX+numberString;
+        String question = getString(getResources().getIdentifier(id, "string", getActivity().getPackageName()));
+        textView.setText(question);
+    }
+
+    private void initViews() {
+        textView = view.findViewById(R.id.word_shown_tv);
+        textView.setText(R.string.first_answer_text);
     }
 
     private void inflateLayout(LayoutInflater inflater, ViewGroup container) {
@@ -32,7 +44,8 @@ public class QuestionFragment extends Fragment {
         }
         else{
             ViewGroup parent = (ViewGroup) view.getParent();
-            parent.removeView(view);
+            if(parent != null)
+                parent.removeView(view);
         }
     }
 
